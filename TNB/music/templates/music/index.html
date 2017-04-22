@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AllBums</title>
+</head>
+<body>
+
+    {% if all_albums %}
+            {% for album in all_albums %}
+                <a href="/music/{{ album.id }}" target="_blank" title="{{ album.album_title }}"><img src="{{ album.album_logo}}" style="width:33.1%;"></a>
+            {% endfor %}
+    {% else %}
+        <h3>NO ALBUMS? PROBABLY DATABASE PROBLEM. COME BACK LATER OR CONTACT US!</h3>
+    {% endif %}
+</body>
+</html>
